@@ -24,7 +24,10 @@ app.get('/search', async (req, res) => {
     imgLinks.push(link);
     length--;
   });
-  res.send({ imgLinks });
+  res.json({
+    status: 'success',
+    data: imgLinks,
+  });
 });
 
 app.listen(port, host, () => {
