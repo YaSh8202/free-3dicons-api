@@ -2,8 +2,8 @@ import axios from 'axios';
 import express from 'express';
 import * as cheerio from 'cheerio';
 
-const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+const host = process.env.VERCEL_URL ?? 'localhost';
+const port = process.env.VERCEL_PORT ? Number(process.env.PORT) : 3000;
 
 const app = express();
 
